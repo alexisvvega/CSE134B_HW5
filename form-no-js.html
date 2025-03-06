@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Alexis Vega</title>
+    <link rel="stylesheet" href="contact.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="navbar">
+        <h1 class="logo">
+          <a href="index.html">Alexis Vega</a>
+        </h1>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+        <label for="menu-toggle" class="hamburger-menu">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </label>
+        <nav class="nav-menu">
+          <ul class="nav-links">
+            <li><a href="aboutMe.html" class="nav-item">About Me</a></li>
+            <li><a href="portfolio.html" class="nav-item">Portfolio</a></li>
+            <li><a href="resume.html" class="nav-item">Resume</a></li>
+            <li><a href="contact.html" class="nav-item">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="contact-section">
+        <h2>Contact Me</h2>
+        <address>
+          Email: 
+          <a href="mailto:alexisvvegab@gmail.com">alexisvvegab@gmail.com</a> ||
+          <a href="mailto:a9vega@ucsd.edu">a9vega@ucsd.edu</a><br />
+          Number: 760-638-1053<br />
+          <a href="https://www.linkedin.com/in/alexis-vega-10b496278/" target="_blank">
+            <img src="linkedin.svg" alt="LinkedIn" width="30" height="30" />
+          </a>
+          <a href="https://github.com/alexisvvega" target="_blank">
+            <img src="github.svg" alt="GitHub" width="30" height="30" />
+          </a>
+        </address>
+
+        <form action="https://httpbin.org/post" method="POST">
+          <input type="hidden" name="possible_bot" value="true">
+
+          <label for="subject">Select Subject:</label>
+          <select name="subject" id="subject" required>
+            <optgroup label="General">
+              <option value="inquiry">General Inquiry</option>
+              <option value="feedback">Feedback</option>
+            </optgroup>
+            <optgroup label="Career & Projects">
+              <option value="job_opportunity">Job Opportunity</option>
+              <option value="internship">Internship Inquiry</option>
+              <option value="collaboration">Project Collaboration</option>
+              <option value="freelance">Freelance Work</option>
+            </optgroup>
+          </select>
+
+          <label for="name">Your Full Name:</label>
+          <input type="text" id="name" name="name" required minlength="2" maxlength="100" />
+
+          <label for="email">Your Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="number">Your Phone Number:</label>
+          <input type="tel" id="number" name="number" pattern="\d{3}[-.\s]?\d{3}[-.\s]?\d{4}" placeholder="123-456-7890" />
+
+          <label for="message">Your Message:</label>
+          <textarea id="message" name="message" rows="5" cols="30" required minlength="10" maxlength="500" pattern="[A-Za-z0-9.,!? ]*"></textarea>
+
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Alexis Vega. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
