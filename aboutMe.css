@@ -179,6 +179,60 @@ colgroup col {
     background-color: #d1e5eb;
 }
 
+/* Fun Facts Grid */
+.fun-facts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+/* Fun Fact Card */
+.fun-fact-card {
+    perspective: 1000px;
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+    height: 150px;
+}
+
+.fun-fact-card .fun-fact-front,
+.fun-fact-card .fun-fact-back {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    backface-visibility: hidden;
+    transition: transform 0.6s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.fun-fact-card .fun-fact-front {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+.fun-fact-card .fun-fact-back {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    transform: rotateY(180deg);
+}
+
+.fun-fact-card.flipped .fun-fact-front {
+    transform: rotateY(180deg);
+}
+
+.fun-fact-card.flipped .fun-fact-back {
+    transform: rotateY(0deg);
+}
+
 /* Blockquotes */
 blockquote {
     font-style: italic;
