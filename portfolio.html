@@ -6,6 +6,7 @@
   <title>Portfolio</title>
   <link rel="stylesheet" href="portfolio.css" />
   <script src="toggle.js"></script>
+  <script src="projectCards.js" defer></script>
 </head>
 <body>
   <header>
@@ -35,101 +36,58 @@
   <main class="portfolio-content">
     <section>
       <h1 class="section-title">Projects</h1>
-      <article class="project-list">
+      <article class="project-area">
       
-        <section class="project">
-          <h2 class="project-title">Psyches of Color</h2>
-          <p>
-            As a developer for <abbr title="Triton Software Engineering">TSE</abbr>, I am working on a mobile app for Psyches of Color, a nonprofit organization dedicated to raising mental health awareness for Black and Latinx communities.
-          </p>
-          <picture>
-            <!-- Large image for desktops -->
-            <source srcset="tse_header.png" media="(min-width: 1024px)">
-            <!-- Medium image for tablets -->
-            <source srcset="tse_image.png" media="(min-width: 600px)">
-            <!-- Small image for mobile -->
-            <source srcset="tse_logo.png" media="(max-width: 599px)">
-            <!-- Fallback image -->
-            <img src="tse-logo-yellow.png" alt="Psyches of Color app">
-          </picture>
-          <ul class="project-details">
-            <li>Developing the app using <ins>React Native, Node.js, Express.js, and MongoDB.</ins></li>
-            <li>Implementing secure environment variables for sensitive data handling.</li>
-            <li>Establishing coding standards with Prettier and ESLint for maintainability.</li>
-          </ul>
-          <dl class="project-meta">
-            <dt>Role:</dt>
-            <dd>Software Developer</dd>
-            <dt>Technologies:</dt>
-            <dd>React Native, Node.js, Express.js, MongoDB</dd>
-            <dt>Key Contributions:</dt>
-            <dd>Developing core app features, ensuring secure authentication, and maintaining code quality.</dd>
-          </dl>
+        <section class="project-list">
+          <project-card
+            title="Psyches of Color"
+            description="As a developer for TSE, I am working on a mobile app for Psyches of Color, a nonprofit organization dedicated to raising mental health awareness for Black and Latinx communities."
+            bullets="Developing the app using React Native, Node.js, Express.js, and MongoDB.|Implementing secure environment variables for sensitive data handling.|Establishing coding standards with Prettier and ESLint for maintainability."
+            image="tse-logo-yellow.png"
+            alt="Psyches of Color app"
+            role="Software Developer"
+            technologies="React Native, Node.js, Express.js, MongoDB"
+            contributions = "Developing core app features, ensuring secure authentication, and maintaining code quality."
+            link="https://tritonse.github.io/">
+          </project-card>
+
+          <project-card
+            title="YouLostIt"
+            description="YouLostIt is a privacy-focused lost item tracker developed as part of the CSE 190: Wireless Embedded Systems course. "
+            bullets="Designed a motion detection system on STM32 to simulate a lost-tag tracker.|Implemented I2C communication and LED feedback for real-time motion alerts.|Utilized ITM Console debugging for optimized hardware communication.|Developed firmware to manage sensors, radios, and power efficiently."
+            image="youlostit.png"
+            alt="STM32CubeIDE"
+            role="Embedded Systems Engineer"
+            technologies="STM32, C, Bluetooth Low-Energy"
+            contributions = "Designed game mechanics, improved UI, and enhanced user experience."
+            link="https://github.com/ucsd-cse190b-w25/project-3-adding-low-energy-radio-communication-team-6/blob/main/youlostit-ble/Core/Src/main.c">
+          </project-card>
+        
+          <project-card
+            title="Mario's Playground"
+            description="Developed as part of the WIC project teams, this Nintendo-themed website offers a collection of interactive games featuring beloved characters."
+            bullets="Designed and developed the MarioCoinfall game using HTML, CSS, and JavaScript.|Implemented player movement, coin collection, and bomb collision mechanics.|Built a Mario-themed homepage with intuitive navigation and interactive elements.|Optimized code for smooth performance across devices."
+            image="wic.png"
+            alt="Mario's Playground screenshot"
+            role="Frontend Developer"
+            technologies="HTML, CSS, JavaScript"
+            contributions = "Integrated scheduling, improved communication, and optimized volunteer coordination."
+            link="https://alexisvvega.github.io/Team11/">
+          </project-card>
+        
+          <project-card
+            title="Nova Spero"
+            description="As part of UCSD's Design for Development course, my team partnered with Nova Spero, a nonprofit organization dedicated to supporting refugee communities through education."
+            bullets="Integrated Google Calendar for streamlined scheduling.| Developed tools for efficient carpool coordination.|Implemented Remind App integration for mass communication.|Organized Google Drive for structured data management."
+            image="novaSpero.png"
+            alt="Nova Spero project"
+            role="UX Designer & Developer"
+            technologies="Google Calendar, Remind App"
+            contributions = "Designed motion detection logic, developed firmware, and optimized power consumption."
+            link="https://novaspero.org">
+          </project-card>
         </section>
-      
-        <section class="project">
-          <h2 class="project-title">Mario's Playground</h2>
-          <p>
-            Developed as part of the <abbr title="Women in Computing">WIC</abbr> project teams, this Nintendo-themed website offers a collection of interactive games featuring beloved characters.
-          </p>
-          <ul class="project-details">
-            <li>Designed and developed the MarioCoinfall game using HTML, CSS, and JavaScript.</li>
-            <li>Implemented player movement, coin collection, and bomb collision mechanics.</li>
-            <li>Built a Mario-themed homepage with intuitive navigation and interactive elements.</li>
-            <li>Optimized code for smooth performance across devices.</li>
-          </ul>
-          <dl class="project-meta">
-            <dt>Role:</dt>
-            <dd>Frontend Developer</dd>
-            <dt>Technologies:</dt>
-            <dd>HTML, CSS, JavaScript</dd>
-            <dt>Key Contributions:</dt>
-            <dd>Designed game mechanics, improved UI, and enhanced user experience.</dd>
-          </dl>
-        </section>
-      
-        <section class="project">
-          <h2 class="project-title">Nova Spero</h2>
-          <p>
-            As part of UCSD's Design for Development course, my team partnered with Nova Spero, a nonprofit organization dedicated to supporting refugee communities through education.
-          </p>
-          <ul class="project-details">
-            <li>Integrated Google Calendar for streamlined scheduling.</li>
-            <li>Developed tools for efficient carpool coordination.</li>
-            <li>Implemented Remind App integration for mass communication.</li>
-            <li>Organized Google Drive for structured data management.</li>
-          </ul>
-          <dl class="project-meta">
-            <dt>Role:</dt>
-            <dd>Research, Design, Implementation</dd>
-            <dt>Technologies:</dt>
-            <dd>Google Calendar, Remind App, Google Drive</dd>
-            <dt>Key Contributions:</dt>
-            <dd>Integrated scheduling, improved communication, and optimized volunteer coordination.</dd>
-          </dl>
-        </section>
-      
-        <section class="project">
-          <h2 class="project-title">YouLostIt</h2>
-          <p>
-            YouLostIt is a privacy-focused lost item tracker developed as part of the CSE 190: Wireless Embedded Systems course.
-          </p>
-          <ul class="project-details">
-            <li>Designed a motion detection system on STM32 to simulate a lost-tag tracker.</li>
-            <li>Implemented I2C communication and LED feedback for real-time motion alerts.</li>
-            <li>Utilized ITM Console debugging for optimized hardware communication.</li>
-            <li>Developed firmware to manage sensors, radios, and power efficiently.</li>
-          </ul>
-          <dl class="project-meta">
-            <dt>Role:</dt>
-            <dd>Embedded Systems Engineer</dd>
-            <dt>Technologies:</dt>
-            <dd>STM32, C, Bluetooth Low-Energy</dd>
-            <dt>Key Contributions:</dt>
-            <dd>Designed motion detection logic, developed firmware, and optimized power consumption.</dd>
-          </dl>
-        </section>
-      
+
       </article>
     </section>
   </main>
