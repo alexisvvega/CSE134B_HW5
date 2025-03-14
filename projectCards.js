@@ -151,7 +151,165 @@ class ProjectCard extends HTMLElement {
             <a href="${link}" target="_blank">Learn More</a>
         `;
     }
+    // Define observed attributes
+    static get observedAttributes() {
+        return [
+            "title",
+            "description",
+            "image",
+            "alt",
+            "link",
+            "role",
+            "technologies",
+            "contributions",
+            "bullets"
+        ];
+    }
+
+    // Handle attribute changes
+    attributeChangedCallback(name, oldValue, newValue) {
+        if (oldValue === newValue) return; // No change, exit early
+
+        switch (name) {
+            case "title":
+                this.shadowRoot.querySelector("h2").textContent = newValue;
+                break;
+            case "description":
+                this.shadowRoot.querySelector("p").textContent = newValue;
+                break;
+            case "image":
+                this.shadowRoot.querySelector("img").src = newValue;
+                break;
+            case "alt":
+                this.shadowRoot.querySelector("img").alt = newValue;
+                break;
+            case "link":
+                this.shadowRoot.querySelector("a").href = newValue;
+                break;
+            case "role":
+                this.shadowRoot.querySelector(".project-meta:nth-of-type(1)").innerHTML = `<strong>Role:</strong> ${newValue}`;
+                break;
+            case "technologies":
+                this.shadowRoot.querySelector(".project-meta:nth-of-type(2)").innerHTML = `<strong>Technologies:</strong> ${newValue}`;
+                break;
+            case "contributions":
+                this.shadowRoot.querySelector(".project-meta:nth-of-type(3)").innerHTML = `<strong>Key Contributions:</strong> ${newValue}`;
+                break;
+            case "bullets":
+                const bulletList = newValue ? newValue.split("|") : [];
+                const ul = this.shadowRoot.querySelector("ul");
+                if (ul) {
+                    ul.innerHTML = bulletList.map(bullet => `<li>${bullet}</li>`).join("");
+                }
+                break;
+            default:
+                console.warn(`Unknown attribute changed: ${name}`);
+        }
+    }
 }
 
 // Register the custom element
 customElements.define("project-card", ProjectCard);
+
+// Data Loading Functions
+document.getElementById("loadLocalBtn").addEventListener("click", loadLocalData);
+document.getElementById("loadRemoteBtn").addEventListener("click", loadRemoteData);
+
+// Sample data to store in localStorage
+const sampleData = [
+    {
+        title: "Psyches of Color",
+        description: "As a developer for TSE, I am working on a mobile app for Psyches of Color...",
+        image: "tse-logo-yellow.png",
+        alt: "Psyches of Color app",
+        role: "Software Developer",
+        technologies: "React Native, Node.js, Express.js, MongoDB",
+        contributions: "Developing core app features, ensuring secure authentication...",
+        bullets: "Developing the app using React Native, Node.js, Express.js, and MongoDB.|Implementing secure environment variables...",
+        link: "https://tritonse.github.io/"
+    },
+    {
+        title: "YouLostIt",
+        description: "YouLostIt is a privacy-focused lost item tracker...",
+        image: "youlostit.png",
+        alt: "STM32CubeIDE",
+        role: "Embedded Systems Engineer",
+        technologies: "STM32, C, Bluetooth Low-Energy",
+        contributions: "Designed game mechanics, improved UI...",
+        bullets: "Designed a motion detection system on STM32...",
+        link: "https://github.com/ucsd-cse190b-w25/project-3-adding-low-energy-radio-communication-team-6/blob/main/youlostit-ble/Core/Src/main.c"
+    },
+    {
+        title: "Mario's Playground",
+        description: "Developed as part of the WIC project teams, this Nintendo-themed website offers a collection of interactive games featuring beloved characters.",
+        bullets: "Designed and developed the MarioCoinfall game using HTML, CSS, and JavaScript.|Implemented player movement, coin collection, and bomb collision mechanics.|Built a Mario-themed homepage with intuitive navigation and interactive elements.|Optimized code for smooth performance across devices.",
+        image: "wic.png",
+        alt: "Mario's Playground screenshot",
+        role: "Frontend Developer",
+        technologies: "HTML, CSS, JavaScript",
+        contributions:  "Integrated scheduling, improved communication, and optimized volunteer coordination.",
+        link: "https://alexisvvega.github.io/Team11/"
+    },
+    {
+        title: "Nova Spero",
+        description: "As part of UCSD's Design for Development course, my team partnered with Nova Spero, a nonprofit organization dedicated to supporting refugee communities through education.",
+        bullets: "Integrated Google Calendar for streamlined scheduling.| Developed tools for efficient carpool coordination.|Implemented Remind App integration for mass communication.|Organized Google Drive for structured data management.",
+        imag: "novaspero.png",
+        alt: "Nova Spero project",
+        role: "UX Designer & Developer",
+        technologies: "Google Calendar, Remind App",
+        contributions: "Designed motion detection logic, developed firmware, and optimized power consumption.",
+        link: "https://novaspero.org"
+    }
+];
+
+// Save sample data to localStorage if it doesn't already exist
+if (!localStorage.getItem("projects")) {
+    localStorage.setItem("projects", JSON.stringify(sampleData));
+}
+
+// Load data from localStorage
+function loadLocalData() {
+    const data = JSON.parse(localStorage.getItem("projects"));
+    if (data) {
+        renderProjectCards(data);
+    } else {
+        alert("No data found in localStorage!");
+    }
+}
+
+// Load data from a remote server
+function loadRemoteData() {
+    fetch("https://my-json-server.typicode.com/alexisvvega/CSE134B_HW5/projects")
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error("Network response was not ok");
+            }
+            return response.json();
+        })
+        .then((data) => renderProjectCards(data))
+        .catch((error) => {
+            console.error("Error fetching remote data:", error);
+            alert("Failed to load remote data. Please try again later.");
+        });
+}
+
+// Render project cards dynamically
+function renderProjectCards(data) {
+    const container = document.getElementById("projects-container");
+    container.innerHTML = ""; // Clear existing cards
+
+    data.forEach((project) => {
+        const card = document.createElement("project-card");
+        card.setAttribute("title", project.title);
+        card.setAttribute("description", project.description);
+        card.setAttribute("image", project.image);
+        card.setAttribute("alt", project.alt);
+        card.setAttribute("role", project.role);
+        card.setAttribute("technologies", project.technologies);
+        card.setAttribute("contributions", project.contributions);
+        card.setAttribute("bullets", project.bullets);
+        card.setAttribute("link", project.link);
+        container.appendChild(card);
+    });
+}

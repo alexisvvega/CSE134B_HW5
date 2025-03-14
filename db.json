@@ -38,7 +38,7 @@
             "title": "Nova Spero",
             "description": "As part of UCSD's Design for Development course, my team partnered with Nova Spero, a nonprofit organization dedicated to supporting refugee communities through education.",
             "bullets": "Integrated Google Calendar for streamlined scheduling.| Developed tools for efficient carpool coordination.|Implemented Remind App integration for mass communication.|Organized Google Drive for structured data management.",
-            "image": "novaSpero.png",
+            "image": "novaspero.png",
             "alt": "Nova Spero project",
             "role": "UX Designer & Developer",
             "technologies": "Google Calendar, Remind App",
