@@ -153,7 +153,6 @@ h1 {
 }
 
 /* Table */
-/* Table */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -199,6 +198,45 @@ td:hover {
 /* Add alternating row colors */
 tr:nth-child(even) td {
     background-color: #f4f4f9;
+}
+/* Centered Heading */
+.centered-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+/* About Section */
+.about-section {
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h4 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+/* Thank You Code Block */
+.thank-you-code {
+    padding: 1.5rem;
+    border-radius: 10px;
+    font-family: "Courier New", monospace;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+    margin: 1.5rem 0;
 }
 
 /* Caption Styling */
@@ -285,7 +323,40 @@ td ul li:last-child {
 .fun-fact-card.flipped .fun-fact-back {
     transform: rotateY(0deg);
 }
-
+/* Typing Effect Container */
+.typing-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Blinking Cursor Effect */
+  #thank-you-code::after {
+    content: "|";
+    animation: blink 1s steps(2, start) infinite;
+    opacity: 0;
+  }
+  
+  @keyframes blink {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Typing Animation */
+  #thank-you-code {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #000; /* Cursor effect */
+    font-family: monospace;
+    font-size: 16px;
+    width: 0;
+    animation: typing 4s steps(40, end) forwards;
+  }
+  
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
 /* Blockquotes */
 blockquote {
     font-style: italic;

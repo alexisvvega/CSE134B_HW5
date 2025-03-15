@@ -1,237 +1,263 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Me</title>
     <link rel="stylesheet" href="aboutMe.css" />
     <script src="toggle.js"></script>
     <script src="aboutMe.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="navbar">
-          <h1 class="logo">
-            <a href="index.html">Alexis Vega</a>
-          </h1>
-          <!-- Hamburger Menu Checkbox -->
-          <input type="checkbox" id="menu-toggle" class="menu-toggle" />
-          <label for="menu-toggle" class="hamburger-menu">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-          </label>
-          <nav class="nav-menu">
-            <ul class="nav-links">
-              <li><a href="aboutMe.html" class="nav-item">About Me</a></li>
-              <li><a href="portfolio.html" class="nav-item">Portfolio</a></li>
-              <li><a href="resume.html" class="nav-item">Resume</a></li>
-              <li><a href="contact.html" class="nav-item">Contact</a></li>
-              <button id="theme-toggle" aria-label="Toggle Theme">🌙</button>
-            </ul>
-          </nav>
-        </div>
-      </header>
+      <div class="navbar">
+        <h1 class="logo">
+          <a href="index.html">Alexis Vega</a>
+        </h1>
+        <!-- Hamburger Menu Checkbox -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+        <label for="menu-toggle" class="hamburger-menu">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </label>
+        <nav class="nav-menu">
+          <ul class="nav-links">
+            <li><a href="aboutMe.html" class="nav-item">About Me</a></li>
+            <li><a href="portfolio.html" class="nav-item">Portfolio</a></li>
+            <li><a href="resume.html" class="nav-item">Resume</a></li>
+            <li><a href="contact.html" class="nav-item">Contact</a></li>
+            <button id="theme-toggle" aria-label="Toggle Theme">🌙</button>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
     <main>
-        <section>
-            <h1>Let me introduce myself!</h1>
+      <section>
+        <h1>Let me introduce myself!</h1>
 
-            <!-- Profile Section -->
-            <div class="profile-section">
-                <img src="alexisPicture2.jpeg" alt="Alexis Vega" class="profile-img" />
-                <div class="intro-text">
-                    <aside>
-                        <blockquote>
-                            <p><i>"Computers have lots of memory but no imagination"</i></p>
-                            <cite>- Bill Gates</cite>
-                        </blockquote>
-                    </aside>
+        <!-- Profile Section -->
+        <div class="profile-section">
+          <img
+            src="alexisPicture2.jpeg"
+            alt="Alexis Vega"
+            class="profile-img"
+          />
+          <div class="intro-text">
+            <aside>
+              <blockquote>
+                <p><i>"Computers have lots of memory but no imagination"</i></p>
+                <cite>- Bill Gates</cite>
+              </blockquote>
+            </aside>
 
-                    <p>
-                        Hi! My name is Alexis Vega, and I was born and raised in beautiful San Diego, California. I'm
-                        currently a third-year <b>Computer Science</b> major with a minor in <b>Cognitive Science</b> at
-                        the University of California, San Diego. My passion for technology comes from a love for blending
-                        creativity with logic, and I'm always eager to explore its limitless possibilities.
-                    </p>
+            <p>
+              Hi! My name is Alexis Vega, and I was born and raised in beautiful
+              San Diego, California. I'm currently a third-year
+              <b>Computer Science</b> major with a minor in
+              <b>Cognitive Science</b> at the University of California, San
+              Diego. My passion for technology comes from a love for blending
+              creativity with logic, and I'm always eager to explore its
+              limitless possibilities.
+            </p>
 
-                    <p>
-                        Beyond academics, I enjoy staying active, exploring new cuisines, and searching for the best
-                        strawberry drinks. My curiosity about how things work has led me to pursue projects that solve
-                        real-world problems, and I'm particularly drawn to those that make a meaningful impact.
-                    </p>
+            <p>
+              Beyond academics, I enjoy staying active, exploring new cuisines,
+              and searching for the best strawberry drinks. My curiosity about
+              how things work has led me to pursue projects that solve
+              real-world problems, and I'm particularly drawn to those that make
+              a meaningful impact.
+            </p>
 
-                    <p>
-                        I'm always looking for opportunities to expand my knowledge through <em>research, internships,
-                            and hands-on projects</em>. Whether it's coding, tutoring, or collaborating with peers, I
-                        strive to grow, challenge myself, and contribute to innovative solutions.
-                    </p>
-                </div>
-            </div>
-
-            <hr />
-
-            <!-- Table Section -->
-            <table>
-                <colgroup>
-                    <col span="4" style="background-color: #d1e5eb" />
-                </colgroup>
-                <caption>Me as a Computer Science Student</caption>
-                <tr>
-                    <th>Coding Languages</th>
-                    <th>Relevant Courses</th>
-                    <th>Clubs</th>
-                    <th>Interests in Computer Science</th>
-                </tr>
-                <tr>
-                    <td>
-                        <ul>
-                            <li>Java</li>
-                            <li>Python</li>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JavaScript</li>
-                            <li>C/C++</li>
-                            <li>React</li>
-                            <li>R</li>
-                            <li>LaTeX</li>
-                        </ul>
-                    </td>
-                    <td>
-                        <ul>
-                            <li>Data Structures and Algorithms</li>
-                            <li>Software Tools and Techniques</li>
-                            <li>Design and Analysis of Algorithms</li>
-                            <li>Discrete Math</li>
-                            <li>Statistics</li>
-                            <li>Calculus</li>
-                            <li>Data Analysis</li>
-                        </ul>
-                    </td>
-                    <td>
-                        <ul>
-                            <li>Triton Software Engineering</li>
-                            <li>Women in Computing</li>
-                            <li>Project in a Box</li>
-                            <li>Computer Science and Engineering Society</li>
-                            <li>Association for Computing Machinery</li>
-                        </ul>
-                    </td>
-                    <td>
-                        <ul>
-                            <li>Software Engineering</li>
-                            <li>Mobile App Development</li>
-                            <li>Data Analysis and Visualization</li>
-                            <li>Machine Learning</li>
-                            <li>Web Development</li>
-                            <li>Web Design</li>
-                        </ul>
-                    </td>
-                </tr>
-            </table>
-
-            <hr />
-            <h1 class="centered-heading">More about me:</h1>
-
-            <!-- Dog Section -->
-            <hgroup>
-                <h4 class="common-heading">Meet my Dog:</h4>
-                <p>One big thing about me is I love my dog Suki</p>
-            </hgroup>
-
-            <video controls height="300">
-                <source src="suki.mp4" type="video/mp4" />
-                Your browser doesn't support video playback.
-            </video>
-            <img src="sukiPicture.jpeg" alt="Suki" class="profile-img" />
-
-            <!-- Music Section -->
-            <hgroup>
-                <h4 class="common-heading">My Favorite Music:</h4>
-                <p>I love music and would have to say The Beatles and Tyler the Creator are my favorites</p>
-                <p>Here's one of my favorite Beatles songs:</p>
-            </hgroup>
-
-            <audio controls>
-                <source src="beatles.mp3" type="audio/mpeg" />
-                Your browser doesn't support audio playback.
-            </audio>
-
-            <!-- Creative Hobbies Section -->
-            <hgroup>
-                <h4 class="common-heading">I love everything that lets me be creative:</h4>
-            </hgroup>
-            <pre>
-                I love...
-                   Painting
-            Drawing       Ceramics
-              Jewelry Making
-                    Scrapbooking    Origami
-                            Baking
-              Videography       Cooking     Photography
-                  Playing Piano & Ukulele
-                            and I'm always looking to pick up more hobbies!
-            </pre>
-
-            <figure>
-                <img src="clay.jpeg" alt="Clay Figures" class="profile-img" />
-                <figcaption>Fig.1 - Some of my clay pieces!</figcaption>
-            </figure>
-
-            <p>I hope you were able to learn more about me!</p>
-
-            <pre><code>
-                function thankYou(name) {
-                  console.log("Thank You, " + name);
-                }
-                thankYou("Reader");
-              </code></pre>
-
-              <h4>More Fun Facts:</h4>
-
-<!-- Fun Facts Section -->
-<div class="fun-facts-grid">
-    <div class="fun-fact-card">
-        <div class="fun-fact-front">
-            <p>Favorite Language</p>
+            <p>
+              I'm always looking for opportunities to expand my knowledge
+              through <em>research, internships, and hands-on projects</em>.
+              Whether it's coding, tutoring, or collaborating with peers, I
+              strive to grow, challenge myself, and contribute to innovative
+              solutions.
+            </p>
+          </div>
         </div>
-        <div class="fun-fact-back">
-            <p>Java is my favorite coding language!</p>
-        </div>
-    </div>
-    <div class="fun-fact-card">
-        <div class="fun-fact-front">
-            <p>Favorite Weekend Activity</p>
-        </div>
-        <div class="fun-fact-back">
-            <p>Thrifting and hanging out with my friends</p>
-        </div>
-    </div>
-    <div class="fun-fact-card">
-        <div class="fun-fact-front">
-            <p>Favorite Color</p>
-        </div>
-        <div class="fun-fact-back">
-            <p>Blue</p>
-        </div>
-    </div>
-    <div class="fun-fact-card">
-        <div class="fun-fact-front">
-            <p>Favorite Strawberry Drink</p>
-        </div>
-        <div class="fun-fact-back">
-            <p>Artezan: Korean Strawberry Milk would be number one and Sunright Tea Studio: Strawberry Frostie would be my runner-up</p>
-        </div>
-    </div>
-</div>
+
+        <hr />
+
+        <!-- Table Section -->
+        <table>
+          <colgroup>
+            <col span="4" style="background-color: #d1e5eb" />
+          </colgroup>
+          <caption>
+            Me as a Computer Science Student
+          </caption>
+          <tr>
+            <th>Coding Languages</th>
+            <th>Relevant Courses</th>
+            <th>Clubs</th>
+            <th>Interests in Computer Science</th>
+          </tr>
+          <tr>
+            <td>
+              <ul>
+                <li>Java</li>
+                <li>Python</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>C/C++</li>
+                <li>React</li>
+                <li>R</li>
+                <li>LaTeX</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Data Structures and Algorithms</li>
+                <li>Software Tools and Techniques</li>
+                <li>Design and Analysis of Algorithms</li>
+                <li>Discrete Math</li>
+                <li>Statistics</li>
+                <li>Calculus</li>
+                <li>Data Analysis</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Triton Software Engineering</li>
+                <li>Women in Computing</li>
+                <li>Project in a Box</li>
+                <li>Computer Science and Engineering Society</li>
+                <li>Association for Computing Machinery</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Software Engineering</li>
+                <li>Mobile App Development</li>
+                <li>Data Analysis and Visualization</li>
+                <li>Machine Learning</li>
+                <li>Web Development</li>
+                <li>Web Design</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+
+        <hr />
+        <h1 class="centered-heading">More about me:</h1>
+
+        <!-- Dog Section -->
+        <section class="about-section">
+          <h4 class="common-heading">Meet my Dog:</h4>
+          <p>One big thing about me is I love my dog Suki</p>
+          <video controls height="300" class="media-element">
+            <source src="suki.mp4" type="video/mp4" />
+            Your browser doesn't support video playback.
+          </video>
+          <img
+            src="sukiPicture.jpeg"
+            alt="Suki"
+            class="profile-img media-element"
+          />
         </section>
+
+        <!-- Music Section -->
+        <section class="about-section">
+          <h4 class="common-heading">My Favorite Music:</h4>
+          <p>
+            I love music and would have to say The Beatles and Tyler the Creator
+            are my favorites
+          </p>
+          <p>Here's one of my favorite Beatles songs:</p>
+          <audio controls class="media-element">
+            <source src="beatles.mp3" type="audio/mpeg" />
+            Your browser doesn't support audio playback.
+          </audio>
+        </section>
+
+        <!-- Creative Hobbies Section -->
+        <section class="about-section">
+          <h4 class="common-heading">
+            I love everything that lets me be creative:
+          </h4>
+          <pre class="creative-hobbies">
+        I love...
+           Painting
+    Drawing       Ceramics
+      Jewelry Making
+            Scrapbooking    Origami
+                    Baking
+      Videography       Cooking     Photography
+          Playing Piano & Ukulele
+                    and I'm always looking to pick up more hobbies!
+    </pre
+          >
+          <figure class="media-element">
+            <img src="clay.jpeg" alt="Clay Figures" class="profile-img" />
+            <figcaption>Fig.1 - Some of my clay pieces!</figcaption>
+          </figure>
+        </section>
+
+        <!-- Thank You Section -->
+        <section class="about-section">
+          <p>I hope you were able to learn more about me!</p>
+          <div class="typing-container">
+            <pre><code id="thank-you-code">
+        function thankYou(name) {
+          console.log("Thank You, " + name);
+        }
+        thankYou("Reader");
+      </code></pre>
+          </div>
+        </section>
+
+        <h4>More Fun Facts:</h4>
+
+        <!-- Fun Facts Section -->
+        <div class="fun-facts-grid">
+          <div class="fun-fact-card">
+            <div class="fun-fact-front">
+              <p>Favorite Language</p>
+            </div>
+            <div class="fun-fact-back">
+              <p>Java is my favorite coding language!</p>
+            </div>
+          </div>
+          <div class="fun-fact-card">
+            <div class="fun-fact-front">
+              <p>Favorite Weekend Activity</p>
+            </div>
+            <div class="fun-fact-back">
+              <p>Thrifting and hanging out with my friends</p>
+            </div>
+          </div>
+          <div class="fun-fact-card">
+            <div class="fun-fact-front">
+              <p>Favorite Color</p>
+            </div>
+            <div class="fun-fact-back">
+              <p>Blue</p>
+            </div>
+          </div>
+          <div class="fun-fact-card">
+            <div class="fun-fact-front">
+              <p>Favorite Strawberry Drink</p>
+            </div>
+            <div class="fun-fact-back">
+              <p>
+                Artezan: Korean Strawberry Milk with sea foam cream would be
+                number one and Sunright Tea Studio: Strawberry Frostie would be
+                my runner-up
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Alexis Vega. All rights reserved.</p>
+      <p>&copy; 2025 Alexis Vega. All rights reserved.</p>
     </footer>
-</body>
-
+  </body>
 </html>
